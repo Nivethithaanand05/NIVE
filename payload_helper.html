@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Payload Checker</title>
+<link rel="stylesheet" href="/static/css/style.css">
+</head>
+
+<body class="center-page">
+
+<div class="card">
+  <h2>Payload Lift Checker</h2>
+
+  <form method="POST">
+    <input type="number" name="thrust" placeholder="Total thrust (g)" required>
+    <input type="number" name="payload" placeholder="Payload (g)" required>
+    <button type="submit">Check</button>
+  </form>
+
+  {% if result %}
+    <p class="result">{{ result }}</p>
+  {% endif %}
+</div>
+
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Flight Time Estimator | Drone Maven</title>
+  <link rel="stylesheet" href="static/css/style.css">
+</head>
+<body>
+
+<video autoplay muted loop playsinline class="bg-video">
+  <source src="static/videos/flight_bg.mp4" type="video/mp4">
+</video>
+<div class="overlay"></div>
+
+<header>
+  <div class="logo">DRONE MAVEN</div>
+  <nav><a href="explore.html">Back</a></nav>
+</header>
+
+<div class="tool-page">
+
+  <div class="operation-box">
+    <h2>Flight Time Estimator</h2>
+    <form>
+      <input type="number" placeholder="Battery Capacity (mAh)">
+      <input type="number" placeholder="Average Current Draw (A)">
+      <input type="number" placeholder="Efficiency (%)">
+      <button type="button">Calculate</button>
+    </form>
+  </div>
+
+  <div class="description-box">
+    <h3>About Flight Time Estimation</h3>
+    <p>
+      Flight time estimation helps predict how long a drone
+      can remain airborne under given operating conditions.
+      Overestimating flight time can lead to crashes
+      due to battery depletion.
+      <br><br>
+      This tool calculates realistic flight duration
+      considering battery capacity, current draw,
+      and efficiency losses.
+      <br><br>
+      It helps pilots plan missions safely,
+      maintain reserve margins,
+      and optimize endurance for aerial tasks.
+    </p>
+  </div>
+
+</div>
+</body>
+</html>

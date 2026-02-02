@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Contact | Drone Maven</title>
+
+    <!-- Global CSS -->
+    <link rel="stylesheet" href="./static/css/style.css">
+
+    <style>
+        body {
+            margin: 0;
+            background: black;
+            overflow-x: hidden;
+        }
+
+        /* Header */
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            height: 70px;
+            padding: 0 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: rgba(0,0,0,0.6);
+            z-index: 10;
+        }
+
+        .logo {
+            color: #00ffe5;
+            font-size: 20px;
+            font-weight: bold;
+            text-shadow: 0 0 12px rgba(0,255,229,0.8);
+        }
+
+        header a {
+            color: #00ffe5;
+            text-decoration: none;
+            font-size: 14px;
+        }
+
+        /* Video */
+        .bg-video {
+            position: fixed;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -3;
+        }
+
+        .overlay {
+            position: fixed;
+            inset: 0;
+            background: linear-gradient(
+                120deg,
+                rgba(0,0,0,0.35),
+                rgba(0,40,80,0.35)
+            );
+            z-index: -2;
+        }
+
+        .future-glow {
+            position: fixed;
+            inset: 0;
+            background:
+              radial-gradient(circle at 25% 30%, rgba(0,255,255,0.25), transparent 45%),
+              radial-gradient(circle at 75% 70%, rgba(138,43,226,0.25), transparent 50%);
+            animation: glowMove 10s infinite alternate ease-in-out;
+            z-index: -1;
+        }
+
+        @keyframes glowMove {
+            from { transform: translateY(0); }
+            to { transform: translateY(-35px); }
+        }
+
+        /* Main Card */
+        .contact-card {
+            max-width: 1100px;
+            margin: 130px auto;
+            padding: 45px;
+            display: flex;
+            gap: 45px;
+            background: rgba(0,0,0,0.55);
+            border-radius: 22px;
+            box-shadow: 0 0 35px rgba(0,255,229,0.35);
+        }
+
+        /* Photos */
+        .photo-section {
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+        }
+
+        .photo-section img {
+            width: 260px;
+            border-radius: 18px;
+            border: 2px solid #00ffe5;
+            box-shadow: 0 0 22px rgba(0,255,229,0.6);
+        }
+
+        /* Details */
+        .details h2 {
+            color: #00ffe5;
+            font-size: 30px;
+            text-shadow: 0 0 14px rgba(0,255,229,0.9);
+        }
+
+        .details h4 {
+            margin-top: 8px;
+            color: #ffffff;
+            font-weight: normal;
+        }
+
+        .details p {
+            margin-top: 18px;
+            color: #cfdfe3;
+            line-height: 1.8;
+            font-size: 15px;
+        }
+
+        .info {
+            margin-top: 28px;
+        }
+
+        .info p {
+            font-size: 15px;
+            color: #cfdfe3;
+        }
+
+        .info span {
+            color: #00ffe5;
+            font-weight: bold;
+        }
+
+        @media (max-width: 900px) {
+            .contact-card {
+                flex-direction: column;
+                align-items: center;
+            }
+            .photo-section {
+                flex-direction: row;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<!-- Background -->
+<video autoplay muted loop playsinline class="bg-video">
+    <source src="./static/videos/contact_bg.mp4" type="video/mp4">
+</video>
+<div class="overlay"></div>
+<div class="future-glow"></div>
+
+<!-- Header -->
+<header>
+    <div class="logo">DRONE MAVEN</div>
+    <nav>
+        <a href="explore.html">← Back to Explore</a>
+    </nav>
+</header>
+
+<!-- Contact Card -->
+<div class="contact-card">
+
+    <!-- Two Photos -->
+    <div class="photo-section">
+        <img src="./static/images/profile1.jpg" alt="Nivethitha A">
+        <img src="./static/images/profile2.jpg" alt="Nivethitha A">
+    </div>
+
+    <!-- Details -->
+    <div class="details">
+        <h2>Nivethitha A</h2>
+        <h4>Author & Developer – Drone Maven</h4>
+
+        <p>
+            I am an Electronics and Communication Engineering student passionate about
+            drone systems, embedded electronics, and future-focused engineering tools.
+            Drone Maven was developed as a technical platform to help students and
+            engineers design drones using structured calculations and visual guidance.
+        </p>
+
+        <p>
+            This project combines modern web technologies with engineering concepts
+            to create an interactive learning and design environment for UAV systems.
+            It reflects my interest in applying technology to solve real-world
+            engineering problems.
+        </p>
+
+        <div class="info">
+            <p><span>Email:</span> nivethithaanand05@gmail.com</p>
+            <p><span>Phone:</span> +91 82203 91612</p>
+        </div>
+    </div>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Beginner Guide | Drone Maven</title>
+
+    <!-- Global Style -->
+    <link rel="stylesheet" href="./static/css/style.css">
+
+    <style>
+        /* Page-specific tweaks */
+        .tool-page {
+            position: relative;
+            z-index: 2;
+            max-width: 900px;
+            margin: 120px auto;
+            padding: 40px;
+            background: rgba(0, 0, 0, 0.55);
+            border-radius: 20px;
+            box-shadow: 0 0 30px rgba(0, 255, 230, 0.25);
+        }
+
+        .tool-page h2 {
+            color: #00ffe5;
+            margin-bottom: 15px;
+            text-shadow: 0 0 12px rgba(0,255,229,0.6);
+        }
+
+        .tool-page h3 {
+            color: #ffffff;
+            margin-top: 30px;
+        }
+
+        .tool-page p {
+            color: #cfdfe3;
+            line-height: 1.8;
+            font-size: 16px;
+        }
+
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 70px;
+            padding: 0 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: rgba(0,0,0,0.7);
+            z-index: 3;
+        }
+
+        .logo {
+            font-size: 20px;
+            font-weight: bold;
+            color: #00ffe5;
+            text-shadow: 0 0 10px rgba(0,255,229,0.7);
+        }
+
+        header a {
+            color: #00ffe5;
+            text-decoration: none;
+            font-size: 14px;
+        }
+
+        header a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+
+<!-- Background Video -->
+<video autoplay muted loop playsinline class="bg-video">
+    <source src="./static/videos/guide_bg.mp4" type="video/mp4">
+</video>
+
+<!-- Dark Overlay -->
+<div class="overlay"></div>
+
+<!-- Header -->
+<header>
+    <div class="logo">DRONE MAVEN</div>
+    <nav>
+        <a href="explore.html">← Back to Explore</a>
+    </nav>
+</header>
+
+<!-- Main Content -->
+<div class="tool-page">
+
+    <!-- Operation Box -->
+    <h2>Beginner Learning Guide</h2>
+    <p>
+        This guide is designed for students, hobbyists, and engineers who are
+        new to drone technology. It explains the fundamental concepts required
+        to understand, design, and analyze multirotor drones.
+    </p>
+
+    <!-- Description -->
+    <h3>Drone Basics Explained</h3>
+    <p>
+        A drone is an unmanned aerial vehicle that relies on a coordinated system
+        of motors, propellers, electronic speed controllers (ESCs), batteries,
+        and a flight controller to achieve stable flight.
+    </p>
+
+    <p>
+        Each motor spins a propeller to generate thrust. The combined thrust from
+        all motors must exceed the total weight of the drone in order to lift off.
+        Proper thrust-to-weight ratio is critical for efficiency and safety.
+    </p>
+
+    <p>
+        The battery supplies electrical energy to the system. Its voltage,
+        capacity, and discharge rating (C-rating) directly affect flight time
+        and performance. Choosing an undersized battery can cause voltage drops
+        and crashes.
+    </p>
+
+    <p>
+        ESCs act as intermediaries between the battery and motors. They regulate
+        current flow and control motor speed based on signals from the flight
+        controller. Using an ESC with insufficient current rating can lead to
+        overheating and failure.
+    </p>
+
+    <p>
+        The flight controller is the brain of the drone. It processes sensor data
+        (gyroscope, accelerometer, barometer) and adjusts motor speeds to maintain
+        stability and execute pilot commands.
+    </p>
+
+    <p>
+        Understanding these subsystems and how they interact is the foundation
+        for advanced topics like motor selection, propeller optimization,
+        payload calculation, and autonomous flight.
+    </p>
+
+</div>
+
+</body>
+</html>

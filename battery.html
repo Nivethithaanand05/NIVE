@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Battery Helper | Drone Maven</title>
+  <link rel="stylesheet" href="static/css/style.css">
+</head>
+<body>
+
+<video autoplay muted loop playsinline class="bg-video">
+  <source src="static/videos/battery_bg.mp4" type="video/mp4">
+</video>
+<div class="overlay"></div>
+
+<header>
+  <div class="logo">DRONE MAVEN</div>
+  <nav><a href="explore.html">Back</a></nav>
+</header>
+
+<div class="tool-page">
+
+  <div class="operation-box">
+    <h2>Battery Helper</h2>
+    <form>
+      <input type="number" placeholder="Battery Capacity (mAh)">
+      <input type="number" placeholder="Current Draw (A)">
+      <input type="number" placeholder="Battery Voltage (V)">
+      <button type="button">Estimate</button>
+    </form>
+  </div>
+
+  <div class="description-box">
+    <h3>About Battery Selection</h3>
+    <p>
+      Battery selection directly affects flight time, safety,
+      and performance of a drone.
+      Choosing an undersized battery can lead to voltage sag,
+      overheating, and mid-air shutdowns.
+      <br><br>
+      This tool estimates required battery capacity,
+      discharge C-rating, and safety margin
+      based on current consumption and voltage.
+      <br><br>
+      Proper battery sizing improves endurance,
+      prevents damage to electronics,
+      and ensures consistent power delivery
+      during aggressive maneuvers and payload flight.
+    </p>
+  </div>
+
+</div>
+</body>
+</html>

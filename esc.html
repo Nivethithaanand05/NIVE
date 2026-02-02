@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>ESC Checker | Drone Maven</title>
+  <link rel="stylesheet" href="static/css/style.css">
+</head>
+<body>
+
+<video autoplay muted loop playsinline class="bg-video">
+  <source src="static/videos/esc_bg.mp4" type="video/mp4">
+</video>
+<div class="overlay"></div>
+
+<header>
+  <div class="logo">DRONE MAVEN</div>
+  <nav><a href="explore.html">Back</a></nav>
+</header>
+
+<div class="tool-page">
+
+  <div class="operation-box">
+    <h2>ESC Safety Checker</h2>
+    <form>
+      <input type="number" placeholder="Motor Current (A)">
+      <input type="number" placeholder="ESC Rating (A)">
+      <button type="button">Check Safety</button>
+    </form>
+  </div>
+
+  <div class="description-box">
+    <h3>About ESC Safety</h3>
+    <p>
+      Electronic Speed Controllers regulate power delivery
+      from the battery to the motors.
+      Using an underrated ESC can cause overheating,
+      signal failure, or complete motor shutdown.
+      <br><br>
+      This tool verifies ESC current rating
+      against motor current demand,
+      ensuring adequate thermal and electrical margins.
+      <br><br>
+      Proper ESC selection improves reliability,
+      prevents component failure,
+      and ensures smooth motor control.
+    </p>
+  </div>
+
+</div>
+</body>
+</html>

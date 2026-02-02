@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Drone Maven</title>
+
+<!-- TECH FONT -->
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;800&display=swap" rel="stylesheet">
+
+<style>
+/* RESET */
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Orbitron',sans-serif;
+}
+
+/* BODY */
+body{
+  height:100vh;
+  background:radial-gradient(circle at top,#021821,#000);
+  color:#fff;
+  overflow:hidden;
+}
+
+/* NAVBAR */
+.navbar{
+  position:fixed;
+  top:0;
+  width:100%;
+  padding:20px 60px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  background:rgba(0,0,0,0.6);
+  backdrop-filter:blur(12px);
+}
+
+.logo{
+  color:#7ffcff;
+  font-weight:700;
+  letter-spacing:2px;
+}
+
+.nav a{
+  margin-left:30px;
+  text-decoration:none;
+  color:#cfcfcf;
+  transition:.3s;
+}
+
+.nav a:hover{
+  color:#7ffcff;
+}
+
+.signup{
+  border:1px solid #7ffcff;
+  padding:6px 16px;
+  border-radius:20px;
+}
+
+/* HERO */
+.hero{
+  height:100vh;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+}
+
+.title{
+  font-size:72px;
+  letter-spacing:5px;
+  opacity:0;
+  filter:blur(30px);
+  transition:all 2s ease;
+}
+
+.title.show{
+  opacity:1;
+  filter:blur(0);
+  text-shadow:
+    0 0 10px #7ffcff,
+    0 0 40px rgba(127,252,255,.6),
+    0 0 80px rgba(127,252,255,.3);
+}
+
+.subtitle{
+  margin-top:25px;
+  max-width:850px;
+  color:#b5b5b5;
+  line-height:1.8;
+  font-size:16px;
+}
+
+.btn{
+  margin-top:40px;
+  padding:14px 40px;
+  background:#7ffcff;
+  color:#000;
+  border:none;
+  border-radius:30px;
+  font-size:16px;
+  cursor:pointer;
+  transition:.3s;
+}
+
+.btn:hover{
+  box-shadow:0 0 30px rgba(127,252,255,.9);
+}
+</style>
+</head>
+
+<body>
+
+<header class="navbar">
+  <div class="logo">DRONE MAVEN</div>
+  <div class="nav">
+    <a href="#">Login</a>
+    <a href="#" class="signup">Sign Up</a>
+    <a href="contact.html">Contact</a>
+  </div>
+</header>
+
+<section class="hero">
+  <h1 id="title" class="title">DRONE MAVEN</h1>
+
+  <p class="subtitle">
+    An engineering-grade platform for intelligent drone design —
+    motor selection, battery planning, propeller matching,
+    flight-time estimation, and ESC safety analysis.
+  </p>
+<a class="btn" href="#" onclick="goExplore()">Explore Platform</a>
+
+<script>
+function goExplore() {
+  if (localStorage.getItem("loggedIn") === "true") {
+    window.location.href = "explore.html";
+  } else {
+    window.location.href = "login.html";
+  }
+}
+</script>
+
+</section>
+
+<script>
+window.onload = () => {
+  setTimeout(()=>{
+    document.getElementById("title").classList.add("show");
+  },300);
+};
+</script>
+
+</body>
+</html>

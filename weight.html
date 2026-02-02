@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Weight Calculator | Drone Maven</title>
+  <link rel="stylesheet" href="static/css/style.css">
+</head>
+<body>
+
+<!-- Background Video -->
+<video autoplay muted loop playsinline class="bg-video">
+  <source src="static/videos/calculation_bg.mp4" type="video/mp4">
+</video>
+<div class="overlay"></div>
+
+<header>
+  <div class="logo">DRONE MAVEN</div>
+  <nav><a href="explore.html">Back</a></nav>
+</header>
+
+<div class="tool-page">
+
+  <!-- OPERATION -->
+  <div class="operation-box">
+    <h2>Total Drone Weight Calculator</h2>
+
+    <form>
+      <input type="number" placeholder="Frame Weight (grams)">
+      <input type="number" placeholder="Motor Weight × 4 (grams)">
+      <input type="number" placeholder="ESC Weight × 4 (grams)">
+      <input type="number" placeholder="Battery Weight (grams)">
+      <input type="number" placeholder="Flight Controller Weight (grams)">
+      <input type="number" placeholder="Payload Weight (grams)">
+      <input type="number" placeholder="Landing Gear Weight (grams)">
+      <input type="number" placeholder="Extra Accessories (grams)">
+
+      <button type="button">Estimate Total Weight</button>
+    </form>
+  </div>
+
+  <!-- DESCRIPTION -->
+  <div class="description-box">
+    <h3>About Weight Estimation</h3>
+    <p>
+      Accurate weight estimation is critical for safe drone operation.
+      Total mass directly affects thrust requirements, flight time,
+      motor temperature, and battery discharge rate.
+      <br><br>
+      This calculator considers individual component weights including
+      frame, motors, ESCs, battery, payload, landing gear, and accessories.
+      Ignoring even small components can lead to underpowered designs.
+      <br><br>
+      Engineers use total weight to validate thrust-to-weight ratio,
+      select proper motors and propellers, and ensure reliable flight.
+      This step should always be completed before motor selection.
+    </p>
+  </div>
+
+</div>
+
+</body>
+</html>
