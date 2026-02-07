@@ -5,6 +5,20 @@
   <title>Flight Time Estimator | Drone Maven</title>
   <link rel="stylesheet" href="static/css/style.css">
 </head>
+
+<script>
+function flightTime(){
+
+let battery = document.getElementById("battery").value;
+let current = document.getElementById("current").value;
+
+let time = (battery/current)*60;
+
+document.getElementById("result").innerText =
+"Estimated flight time: "+time.toFixed(1)+" min";
+}
+</script>
+
 <body>
 
 <video autoplay muted loop playsinline class="bg-video">
@@ -50,3 +64,46 @@
 </div>
 </body>
 </html>
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Flight Time</title>
+<link rel="stylesheet" href="static/css/style.css">
+<script src="static/js/calc.js"></script>
+</head>
+
+<body>
+
+<video autoplay muted loop class="bg-video">
+<source src="static/videos/flight_bg.mp4">
+</video>
+<div class="overlay"></div>
+
+<header>
+<div class="logo">DRONE MAVEN</div>
+<nav>
+<a href="explore.html">Tools</a>
+<a href="contact.html">Contact</a>
+</nav>
+</header>
+
+<div class="tool-page">
+
+<div class="operation-box">
+<h2>Flight Time Calculator</h2>
+
+<input id="battery" placeholder="Battery capacity mAh">
+<input id="current" placeholder="Average current A">
+
+<button onclick="flightCalc()">Calculate</button>
+</div>
+
+<div class="result-box">
+<pre id="result"></pre>
+</div>
+
+</div>
+</body>
+</html>
+

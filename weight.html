@@ -5,6 +5,21 @@
   <title>Weight Calculator | Drone Maven</title>
   <link rel="stylesheet" href="static/css/style.css">
 </head>
+<script>
+function weightCalc(){
+
+let frame = +document.getElementById("frame").value;
+let motor = +document.getElementById("motor").value;
+let battery = +document.getElementById("battery").value;
+let payload = +document.getElementById("payload").value;
+
+let total = frame + motor + battery + payload;
+
+document.getElementById("result").innerText =
+"Total weight: "+total+" g";
+}
+</script>
+
 <body>
 
 <!-- Background Video -->
@@ -60,3 +75,11 @@
 
 </body>
 </html>
+
+<input id="frameW" placeholder="Frame weight">
+<input id="motorW" placeholder="Motors total">
+<input id="batteryW" placeholder="Battery">
+<input id="payloadW" placeholder="Payload">
+
+<button onclick="weightCalc()">Total weight</button>
+<div id="result" class="result"></div>

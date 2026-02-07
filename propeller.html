@@ -5,6 +5,30 @@
   <title>Propeller Selection | Drone Maven</title>
   <link rel="stylesheet" href="static/css/style.css">
 </head>
+
+<script>
+function propSuggest(){
+
+let kv = document.getElementById("kv").value;
+
+let prop;
+
+if(kv > 1200) prop = "5 inch propeller";
+else if(kv > 900) prop = "8 inch propeller";
+else prop = "10-12 inch propeller";
+
+document.getElementById("result").innerText =
+"Recommended prop: "+prop;
+}
+</script>
+
+<input id="kv" placeholder="Motor KV">
+<button onclick="propSuggest()">Match Propeller</button>
+<div id="result"></div>
+
+
+
+
 <body>
 
 <video autoplay muted loop playsinline class="bg-video">
@@ -50,3 +74,24 @@
 </div>
 </body>
 </html>
+
+<div class="tool-container">
+<h2>Propeller Selection</h2>
+
+<div class="range-box">
+<p>5 inch → racing drone</p>
+<p>8 inch → camera drone</p>
+<p>12 inch → heavy lift</p>
+</div>
+
+<div class="image-select">
+<img src="static/images/prop1.jpg" onclick="document.getElementById('propSize').value=5">
+<img src="static/images/prop2.jpg" onclick="document.getElementById('propSize').value=10">
+</div>
+
+<input id="propSize" placeholder="Prop size">
+<input id="propPitch" placeholder="Pitch">
+
+<button onclick="propCalc()">Match</button>
+<div id="result" class="result"></div>
+</div>

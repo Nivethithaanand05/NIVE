@@ -5,6 +5,18 @@
   <title>ESC Checker | Drone Maven</title>
   <link rel="stylesheet" href="static/css/style.css">
 </head>
+<script>
+function escCheck(){
+
+let motorCurrent = document.getElementById("current").value;
+
+let esc = motorCurrent * 1.5;
+
+document.getElementById("result").innerText =
+"Use ESC rating: "+esc.toFixed(0)+"A";
+}
+</script>
+
 <body>
 
 <video autoplay muted loop playsinline class="bg-video">
@@ -49,3 +61,7 @@
 </div>
 </body>
 </html>
+
+<input id="motorCurrent" placeholder="Motor current A">
+<button onclick="escCheck()">Check ESC</button>
+<div id="result" class="result"></div>

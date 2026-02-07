@@ -6,6 +6,27 @@
   <link rel="stylesheet" href="static/css/style.css">
 </head>
 
+<script>
+function motorSuggest(){
+
+let weight = document.getElementById("weight").value;
+
+let thrust = weight * 2;
+let kv;
+
+if(weight < 1000) kv = "1000–1400 KV";
+else if(weight < 3000) kv = "800–1000 KV";
+else kv = "500–800 KV";
+
+document.getElementById("result").innerHTML =
+"Required thrust per motor: "+(thrust/4).toFixed(0)+" g<br>" +
+"Recommended KV range: "+kv;
+}
+</script>
+<input id="weight" placeholder="Drone weight (grams)">
+<button onclick="motorSuggest()">Suggest Motor</button>
+<div id="result"></div>
+
 <body>
 
 <!-- BACKGROUND VIDEO -->
@@ -59,3 +80,91 @@
 
 </body>
 </html>
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Motor Selection</title>
+<link rel="stylesheet" href="static/css/style.css">
+<script src="static/js/calc.js"></script>
+</head>
+
+<body>
+
+<video autoplay muted loop class="bg-video">
+<source src="static/videos/motor_bg.mp4">
+</video>
+<div class="overlay"></div>
+
+<header>
+<div class="logo">DRONE MAVEN</div>
+<nav>
+<a href="explore.html">Tools</a>
+<a href="contact.html">Contact</a>
+</nav>
+</header>
+
+<div class="tool-page">
+
+<div class="operation-box">
+<h2>Motor Selection Tool</h2>
+<p>
+Enter drone weight to calculate required thrust and KV range.
+This tool helps match motor power with payload and propeller size.
+</p>
+
+<input id="weight" placeholder="Drone weight (grams)">
+<button onclick="motorCalc()">Calculate Motor</button>
+</div>
+
+<div class="result-box">
+<h3>Result</h3>
+<pre id="result"></pre>
+</div>
+
+</div>
+</body>
+</html>
+
+<head>
+<link rel="stylesheet" href="static/css/style.css">
+<script src="static/js/tools.js"></script>
+</head>
+
+<body>
+<div class="tool-container">
+
+<h2>Motor Selection</h2>
+
+<div class="range-box">
+<p><b>Typical ranges:</b></p>
+<p>Small drone: 800–1400 KV</p>
+<p>Camera drone: 700–900 KV</p>
+<p>Heavy lift: 400–700 KV</p>
+</div>
+
+<div class="image-select">
+<img src="static/images/motor1.jpg" onclick="selectMotor('2207',1200,1200)">
+<img src="static/images/motor2.jpg" onclick="selectMotor('2212',920,1500)">
+</div>
+
+<input id="motorType" placeholder="Motor type">
+<input id="motorKV" placeholder="KV rating">
+<input id="motorThrust" placeholder="Max thrust">
+<input id="droneWeight" placeholder="Drone weight (g)">
+
+<button onclick="motorCalc()">Calculate</button>
+
+<div class="result" id="result"></div>
+
+</div>
+</body>
+<div class="image-select">
+
+<img src="static/images/motor1.jpg"
+onclick="selectMotor('2207',1200,1200)">
+
+<img src="static/images/motor2.jpg"
+onclick="selectMotor('2212',920,1500)">
+
+</div>

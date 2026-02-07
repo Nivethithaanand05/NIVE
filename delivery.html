@@ -49,3 +49,19 @@
 </div>
 </body>
 </html>
+
+<script>
+function deliveryPlan(){
+
+let payload = document.getElementById("payload").value;
+
+let frame;
+
+if(payload < 500) frame="250 frame";
+else if(payload < 2000) frame="450 frame";
+else frame="680 heavy lift frame";
+
+document.getElementById("result").innerText =
+"Suggested frame: "+frame;
+}
+</script>

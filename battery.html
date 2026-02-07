@@ -5,6 +5,20 @@
   <title>Battery Helper | Drone Maven</title>
   <link rel="stylesheet" href="static/css/style.css">
 </head>
+
+<script>
+function batteryCalc(){
+
+let current = document.getElementById("current").value;
+let time = document.getElementById("time").value;
+
+let capacity = current * time;
+
+document.getElementById("result").innerText =
+"Battery needed: "+capacity+" mAh";
+}
+</script>
+
 <body>
 
 <video autoplay muted loop playsinline class="bg-video">
@@ -51,3 +65,14 @@
 </div>
 </body>
 </html>
+<div class="range-box">
+<p>3S → small drone</p>
+<p>4S → medium drone</p>
+<p>6S → heavy drone</p>
+</div>
+
+<input id="batteryCap" placeholder="Battery mAh">
+<input id="currentDraw" placeholder="Current A">
+
+<button onclick="flightCalc()">Estimate flight time</button>
+<div id="result" class="result"></div>
